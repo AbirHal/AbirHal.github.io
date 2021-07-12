@@ -1,2 +1,2 @@
 # website1.github.io
-my website using
+my website using HTML CSS JS
