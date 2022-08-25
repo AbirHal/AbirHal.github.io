@@ -756,9 +756,9 @@ color: #fff;
      /* padding-bottom: 20;
       margin-bottom: 60px;*/
   margin: auto;
- /*  width: 100px;
+  width: 100px;
    height: 100%;
-  */
+  
 
 }
 /*
@@ -907,8 +907,10 @@ transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05,1
 font-size: var(--h2-font);
 text-align: center;
 font-weight: 500;
-padding-bottom: 20;
-margin-bottom: 60px;
+  
+    margin: auto;
+    width: 100px;
+    height: 100%;
 }
 
 
