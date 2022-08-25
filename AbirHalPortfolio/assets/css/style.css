@@ -743,6 +743,232 @@ color: #fff;
     }
   /***************** end about********/
 
+/*****start skills******/
+
+.skill .title{
+  /* font-size: var(--h2-font);
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 20;
+  margin-bottom: 60px;*/ font-size: var(--h2-font);
+      text-align: center;
+      font-weight: 500;
+     /* padding-bottom: 20;
+      margin-bottom: 60px;*/
+  margin: auto;
+ /*  width: 100px;
+   height: 100%;
+  */
+
+}
+/*
+.skill .title::before{
+   content: "";
+   position:absolute;
+   bottom: 0px;
+   left: 50%;
+   color:#000;
+   background:var(--main-color);
+   width: 50%;
+   height: 3px;
+   transform: translateX(-50%);
+
+
+}
+
+.skill .title::after{
+   content: "My Skills";
+   position: absolute;
+   bottom:-10px;
+   left: 50%;
+   font-size: 50px;
+   padding: 50px;
+   color:#000;
+   background: #fff;
+   transform: translateX(-50%);
+   transition: ease .40s;
+
+
+
+}
+
+*/
+
+
+.skill .line {
+   margin: auto;
+   height: 3px;
+   background-color: #000;
+   width: 400px;
+   margin-top: 20px;
+   margin-bottom: 80px}
+   .skill .line .line1 {
+       margin: auto;
+       width: 100px;
+       background-color: var(--main-color);
+       height: 100%;
+   }
+
+  .skill{
+    padding: 10px;
+  }
+.skill .progress{
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+ 
+}
+.skill .progress span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: width 1s linear;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  
+}
+  /***************** end skill********/
+
+
+/******start service ******/
+.services-dark{
+  color: #fff;
+
+background-color: #000;
+
+}
+.services{
+  width: 100%;
+ 
+  position: relative;
+  min-height: 40vh;
+margin-top: 100px;
+    /*padding: 10px;*/
+box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+.services h2 a {
+  text-align: center;
+  padding-top: 50px;
+  color: #000;
+  letter-spacing: 2px;
+  font-size: 40px;
+  font-weight: 400;
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+.services .web, .services .responsive, .services .shield {
+  margin-bottom: 100px;
+  margin-top: 50px;
+  font-size: var(--h2-font);
+
+position: relative;
+}
+.services a{
+  display: grid;
+}
+/*
+.services .web:hover{
+  padding: 50px;
+
+border-radius: 12px;
+  will-change: transform;
+  transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05,1.05,1.05);
+  background: #fff;
+  box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+}
+.services .responsive:hover{
+  padding: 50px;
+
+  background: #fff;
+  box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+  
+border-radius: 12px;
+will-change: transform;
+transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05,1.05,1.05);
+}
+.services .shield:hover{
+  padding: 50px;
+
+  background: #fff;
+  box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+  
+border-radius: 12px;
+will-change: transform;
+transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05,1.05,1.05);
+}*/
+.services .title{
+font-size: var(--h2-font);
+text-align: center;
+font-weight: 500;
+padding-bottom: 20;
+margin-bottom: 60px;
+}
+
+
+.services .line {
+  margin: auto;
+  height: 3px;
+  background-color: #000;
+      width: 300px;
+  margin-top: 20px;
+  margin-bottom: 80px}
+  .services .line .line1 {
+      margin: auto;
+      width: 100px;
+      background-color: var(--main-color);
+      height: 100%;
+  }
+.services .responsive:after{
+  content: '';
+  position: absolute;
+  border-left: 5px solid var(--main-color);
+  bottom: 0;
+ 
+  left: 0;
+
+  top: 100%;
+  transition: all 500ms;
+}
+
+.services .web:hover:after{
+  top: 0;
+}
+
+.services .web:after{
+  content: '';
+  position: absolute;
+  border-left: 5px solid var(--main-color);
+  bottom: 0;
+ 
+  right: 0;
+
+  top: 100%;
+  transition: all 500ms;
+}
+.services .responsive:hover:after{
+  top: 0;
+}
+.services .shield:after{
+  content: '';
+  position: absolute;
+  border-left: 5px solid var(--main-color);
+  bottom: 0;
+ 
+  left: 0;
+
+  top: 100%;
+  transition: all 500ms;
+}
+
+.services .shield:hover:after{
+  top: 0;
+}
 /*--------------------------------------------------------------
 
 
@@ -820,134 +1046,6 @@ color: #fff;
   top: 0;
   background: #fff;
   border: 2px solid #34b7a7;
-}
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  padding: 70px 20px 80px 20px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
-  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
-}
-
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: ease-in-out 0.3s;
-  position: relative;
-}
-
-.services .icon-box .icon i {
-  font-size: 36px;
-  transition: 0.5s;
-  position: relative;
-}
-
-.services .icon-box .icon svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.services .icon-box .icon svg path {
-  transition: 0.5s;
-  fill: #f5f5f5;
-}
-
-.services .icon-box h4 {
-  font-weight: 600;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-}
-
-.services .icon-box h4 a {
-  color: #222222;
-  transition: ease-in-out 0.3s;
-}
-
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .iconbox-blue i {
-  color: #47aeff;
-}
-
-.services .iconbox-blue:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-blue:hover .icon path {
-  fill: #47aeff;
-}
-
-.services .iconbox-orange i {
-  color: #ffa76e;
-}
-
-.services .iconbox-orange:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-orange:hover .icon path {
-  fill: #ffa76e;
-}
-
-.services .iconbox-pink i {
-  color: #e80368;
-}
-
-.services .iconbox-pink:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-pink:hover .icon path {
-  fill: #e80368;
-}
-
-.services .iconbox-yellow i {
-  color: #ffbb2c;
-}
-
-.services .iconbox-yellow:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-yellow:hover .icon path {
-  fill: #ffbb2c;
-}
-
-.services .iconbox-red i {
-  color: #ff5828;
-}
-
-.services .iconbox-red:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-red:hover .icon path {
-  fill: #ff5828;
-}
-
-.services .iconbox-teal i {
-  color: #11dbcf;
-}
-
-.services .iconbox-teal:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-teal:hover .icon path {
-  fill: #11dbcf;
 }
 
 /*--------------------------------------------------------------
