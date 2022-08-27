@@ -1,3 +1,17 @@
+//sticky header
+$(document).ready(function(){
+  $(window).scroll(function(){
+if(this.scrollY > 20){
+$('header').addClass("sticky");
+
+}else{
+  $('header').removeClass("sticky");
+
+}
+  });
+});
+
+
 function fun() {  
   alert (" This project is not completed yet!!,I will upload it soon ");  
 }  
