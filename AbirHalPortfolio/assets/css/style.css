@@ -120,12 +120,25 @@ a:hover {
 # Header
 --------------------------------------------------------------*/
 #header {
-margin: 10px;
+
   z-index: 997;
  /* padding: 15px 0;*/
  padding: 30px 10%;
 
 }
+
+header.sticky{
+  /* padding: 10px 10%;
+   width: 100%;*/
+   padding: 30px 10%;
+
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+background-color: #fff;
+}
+
 
 #header .logo {
   font-size: 32px;
