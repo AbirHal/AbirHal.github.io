@@ -1177,30 +1177,121 @@ color: #fff;
   }
 }
 
-
-
-/*--------------------------------------------------------------
-/*--------------------------------------------------------------
-
-/*--------------------------------------------------------------
-
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-#footer {
-  background: #e9e8e6;
-  padding: 30px 0;
-  color: #222222;
-  font-size: 14px;
-  text-align: center;
+
+/********footer**********/
+
+
+.footer {
+  height: 50vh;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  left: 0;
+}
+.footer p{
+  
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+
+}
+.footer-dark p{
+  
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+
 }
 
-#footer .credits {
-  padding-top: 5px;
-  font-size: 13px;
+
+.footer-dark {
+  height: 50vh;
+ 
+  background-color: #000;
+display: flex;
+ flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  width: 100%;
+  left: 0;
+  
+
+ 
+ 
+}
+ .social-icons a{
+width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e3e3;
+ margin: 20px 10px;
+ border-radius: 50%;
+ color:  var(--main-color);
+ text-decoration: none;
+}
+ .social-icons{
+  display: flex;
+}
+.a-social-b a:hover{
+  background-color:  var(--main-color);
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+  transition: all ease 0.5s;
+  color: white;
 }
 
-#footer .credits a {
-  color: #34b7a7;
+.a-social-b a:hover i{
+  color: white;
+  transition: all ease 0.5s;
+  text-decoration: none;
+  }
+  .a-social-b{
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    background-color: #FFF;
+    }
+    .a-social-b a{
+      display: flex;
+      justify-content: center;
+     align-items: center;
+      width: 50px;
+      height: 50px;
+      padding: 0px;
+      margin: 0px;
+      line-height: 0px;
+      border: 1px solid #cbcbcb;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+      text-decoration: none;
+      
+  }
+  
+  .social-dark{
+      background-color: #000;
+  }
+  .a-social-b i{
+    color:  var(--main-color);
+    font-size: 20px;
 }
+.copyright{
+  color: #eee;
+}
+
+/*--------------------------------------------------------------
+/*--------------------------------------------------------------
+
+/*--------------------------------------------------------------
+
