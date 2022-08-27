@@ -469,7 +469,7 @@ margin: 10px;
   background: transparent;
     border: 2px solid var(--main-color);
   margin-top: 30px;
-  color: #000;
+  color: var(--main-color);
   border-radius: 30px;
 
   letter-spacing: 1px;
