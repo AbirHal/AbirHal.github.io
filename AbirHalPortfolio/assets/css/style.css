@@ -1277,6 +1277,17 @@ width: 40px;
     transform: translateY(-50%);
     background-color: #FFF;
     }
+
+    .a-social-b-d {
+      
+ 
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    background-color: #000;
+ 
+    }
     .a-social-b a{
       display: flex;
       justify-content: center;
