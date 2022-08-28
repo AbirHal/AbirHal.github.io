@@ -26,6 +26,84 @@ var typed = new Typed(".typing",{
   loop: true
   });
   
+
+  //scroll reval
+const sr = ScrollReveal({
+  distance: '45px',
+  duration: 2700,
+  reset: true
+})
+sr.reveal('.services, .about, .portfolio-mf, .skill, .paralax-mf',{delat:200, origin:'bottom'});
+
+
+
+// dark mood 
+
+let moon = document.querySelector('#header-social-links');
+let bi_moon = document.querySelector('.bi-moon');
+let logo = document.querySelector('.logo');
+
+let header = document.querySelector('header');
+let li=document.querySelector('nav ');
+let body = document.querySelector('body');
+let section = document.querySelector('section');
+let div = document.querySelector('div .overview ');
+let footer = document.querySelector('.footer');
+let social_iconb= document.querySelector('.a-social-b ');
+let bi_list= document.getElementById('bi-list');
+
+/*
+let skill = document.querySelectorAll('.skill .container-fluid h3');
+
+let footer = document.querySelector('.footer');
+let services = document.querySelector('.services');
+let hire = document.querySelector('.hire');
+let title_about = document.querySelector('.about .title');
+let title_skill = document.querySelector('.skill .title');
+let title_services = document.querySelector('.services .title');
+let title_portfolio = document.querySelector('.potfolio .heading h3');
+let title_get = document.querySelector('.get .title');
+
+
+let about1 = document.querySelector('.about .h1');
+let about2 = document.querySelector('.about  .p1');
+
+let text = document.querySelector('#text-1');
+let social_icon = document.querySelector('.a-social-b'); 
+let social_iconb= document.querySelector('.a-social-b a');
+*/
+
+
+
+moon.onclick = () => {
+  li.classList.remove('navbar');
+header.classList.toggle('dark')
+ li.classList.toggle('navlist-dark');
+ li.classList.toggle('navbar');
+
+  header.classList.remove('sticky');
+
+  header.classList.toggle('sticky-dark');
+
+  bi_moon.classList.toggle('fa-solid-dark');
+  logo.classList.toggle('logo-dark');
+  bi_list.classList.toggle('menu-dark');
+
+  
+section.classList.toggle('hero-dark');
+social_iconb.classList.remove('a-social-b');
+social_iconb.classList.toggle('a-social-b-d');
+social_iconb.classList.toggle('a-social-b');
+
+   
+  body.classList.toggle('dark');
+footer.classList.remove('footer');
+   footer.classList.toggle('footer-dark');
+
+
+}
+
+
 (function() {
   "use strict";
 
@@ -196,57 +274,7 @@ var typed = new Typed(".typing",{
     height: '90vh'
   });
 
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+ 
 
   /**
    * Animation on scroll
