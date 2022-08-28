@@ -130,11 +130,7 @@ a:hover {
 header.sticky{
   /* padding: 10px 10%;
    width: 100%;*/
-   padding: 30px 10%;
-
-    top: 0;
-    right: 0;
-    z-index: 1000;
+ 
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 background-color: #fff;
 }
@@ -190,11 +186,11 @@ background-color: #fff;
 /**
 * Desktop Navigation 
 */
-.navbar {
+.navbar , .navlist-dark {
   padding: 0;
 }
 
-.navbar ul {
+.navbar ul , .navlist-dark ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -203,23 +199,32 @@ background-color: #fff;
  
 }
 
-.navbar li {
+.navbar li , .navlist-dark li {
   position: relative;
   padding: 10px 0 10px 28px;
 }
-
-.navbar a,
-.navbar a:focus {
+.navbar a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Raleway", sans-serif;
   font-size: var(--p-font);
   font-weight: 600;
-  color: #000;
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
+  color: #000;
+}
+.navlist-dark a{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--p-font);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+  color: #fff;
+
 }
 
 .navbar a i,
@@ -229,7 +234,15 @@ background-color: #fff;
   margin-left: 5px;
 }
 
-.navbar>ul>li>a:before {
+
+.navlist-dark a i,
+.navlist-dark a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar>ul>li>a:before ,.navlist-dark>ul>li>a:before {
   content: '';
   position: absolute;
   width: 0;
@@ -247,14 +260,15 @@ background-color: #fff;
   width: 45px;
 }
 
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover>a {
-  color: #000;
+.navlist-dark a:hover:before,
+.navlist-dark li:hover>a:before,
+.navlist-dark .active:before {
+  visibility: visible;
+  width: 45px;
 }
 
-.navbar .dropdown ul {
+
+.navbar .dropdown ul , .navlist-dark .dropdown ul {
   display: block;
   position: absolute;
   left: 14px;
@@ -270,41 +284,41 @@ background-color: #fff;
   border-radius: 4px;
 }
 
-.navbar .dropdown ul li {
+.navbar .dropdown ul li , .navlist-dark .dropdown ul li  {
   min-width: 200px;
   padding: 0;
 }
 
-.navbar .dropdown ul a {
+.navbar .dropdown ul a ,.navlist-dark .dropdown ul a{
   padding: 10px 20px;
   font-size: 15px;
   text-transform: none;
   font-weight: 600;
 }
 
-.navbar .dropdown ul a i {
+.navbar .dropdown ul a i, .navlist-dark .dropdown ul a i {
   font-size: 12px;
 }
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #34b7a7;
+  color: var(--main-color);
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover>ul,.navlist-dark .dropdown:hover>ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
 }
 
-.navbar .dropdown .dropdown ul {
+.navbar .dropdown .dropdown ul,.navlist-dark .dropdown .dropdown ul {
   top: 0;
   left: calc(100% - 30px);
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover>ul, .navlist-dark .dropdown .dropdown:hover>ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -312,11 +326,11 @@ background-color: #fff;
 }
 
 @media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
+  .navbar .dropdown .dropdown ul,.navlist-dark .dropdown .dropdown ul {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover>ul, .navlist-dark .dropdown .dropdown:hover>ul {
     left: -100%;
   }
 }
@@ -528,7 +542,6 @@ color: var(--bg-color);
 @media (max-width: 992px) {
   #hero:before {
     content: "";
-    background: rgba(255, 255, 255, 0.8);
     position: absolute;
     bottom: 0;
     top: 0;
@@ -674,16 +687,8 @@ section {
 
    .about{   
 padding:10px;
-     /*
-    width: 100%;
-    margin-bottom: 10%; 
-        padding: 30px 18%;*/
-/*
-        padding: 10px;*/
-    
-     /*  position: relative;
-       min-height: 40vh;*/
-      /*padding: 10px;*/
+     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+
     }
     .about .title{
        
@@ -1201,6 +1206,8 @@ color: #fff;
   position: relative;
   width: 100%;
   left: 0;
+    margin-top:10px;
+
 }
 .footer p{
   
@@ -1297,6 +1304,92 @@ width: 40px;
   color: #eee;
 }
 
+/************************* Dark Mood *****************/
+
+.dark{
+  background: #000;
+  color: #fff;
+
+}
+
+header.sticky-dark{
+  color: #fff;
+   top: 0;
+   right: 0;
+   z-index: 1000;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  background-color: #000;
+
+}
+
+.navlist-dark{
+  color:#fff;
+}
+
+.logo-dark{
+  border-radius:50px ;
+  background-color: #fff;
+padding: 3px;}
+
+.fa-solid-dark{
+  color: #fff;
+
+}
+
+.menu-dark{
+  background-color: var(--main-color);
+  border-radius: 50px;
+
+}
+
+.hire-dark{
+  color:  var(--main-color);
+ 
+
+}
+.text-dark{color:#fff;
+   
+}
+
+.title-dark{
+  color: #fff;
+     }
+     
+    .about-dark{        color:#fff;
+    }
+    .services-dark{
+      color: #fff;
+    
+  background-color: #000;
+  
+  }
+  .hero-dark{
+    color: #fff;
+    
+    background-color: #000;
+  }
+  
+.footer-dark {
+  height: 50vh;
+ 
+  background-color: #000;
+display: flex;
+ flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  width: 100%;
+  left: 0;
+  
+
+ 
+ 
+}
+
+.social-dark{
+  background-color: #000;
+}
 /*--------------------------------------------------------------
 /*----------------------------RESPONSIVE----------------------------------
 
